@@ -124,7 +124,7 @@ def right_to_left(a, b):
 
 # Лаба 4
 def is_prime_ferma(n):
-    a = randint(1, n - 1)
+    a = randint(1, n)
     if binary_evclid_gcd(a, n) == 1:
         if left_to_right(a, n - 1) % n != 1:
             return False
@@ -142,6 +142,7 @@ def is_prime_solovei_shtrassen(n):
     if j != jacob_sym:
         return False
     return True
+
 
 # Лаба 3
 def legandre(a, p):
@@ -211,4 +212,4 @@ if __name__ == "__main__":
     print("-" * 50)
     print(any_numbers_gcd(evclid_gcd, x, y))
     print(is_prime_ferma(x))
-    print(is_prime_solovei_shtrassen(x))
+    print(is_prime_solovei_shtrassen(37))
